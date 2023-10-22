@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript Closures</h2>
+    <p>Counting with a local variable.</p>
+    <button type="button" onclick="useClosure()">Count!</button>
+    <p id="demo">0</p>
+    <script>
+      const add = (() => {
+        let counter = 0;
+        return () => {
+          counter += 1;
+          return counter;
+        };
+      })();
+
+      const useClosure = () => {
+        document.getElementById("demo").innerHTML = add();
+      };
+    </script>
+  </body>
+</html>

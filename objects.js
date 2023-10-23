@@ -107,6 +107,7 @@ const data = {
     Array: [1, 2, 3],
     Object: { cle: "valeur" },
     Date: new Date(),
+    URL: new URL("http://localhost:5500/page?q=searchString&sort=false"),
     RegExp: /a/i,
     Symbol: Symbol("Ceci est un symbole."),
     Set: new Set(["a", "b"]),

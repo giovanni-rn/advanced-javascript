@@ -128,17 +128,6 @@ add(10, 23, log); // use function including callback -> "33"
 })();
 
 /*
-HTML Password manager : HTML, TypeScript, TailwindCSS
-- Get value from input, store users in Set
-- Get value from input, store passwords in Map
-- Render all users in select menu
-- Render all passwords in list
-- Use TailwindCSS for styling
-- Type all variables with type hints, interfaces and types
-- Explore the global window object using this
-*/
-
-/*
 NODE Live Chat : NodeJS, File system, Socket.io, TypeScript, HTML, TailwindCSS, Jest
 - Follow the Socket.io starting guide
 - Create synchronization between HTML client and Node server

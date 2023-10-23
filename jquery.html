@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Titre</h1>
+    <p class="txt">Lorem ipsum.</p>
+    <p class="txt">Dolor sit amet consectetur.</p>
+    <p class="txt">Ddicta hic libero.</p>
+    <button id="btn1" onclick="this.style.display = 'none'">Hide me (JS)</button>
+    <button id="btn2" onclick="$(document).ready(() => $('#btn2').hide())">Hide me (jQuery)</button>
+    <br>
+    <button id="btn3" onclick="moveHistory('back')">Back</button>
+    <button id="btn3" onclick="moveHistory('forward')">Forth</button>
+    <p id="demo"></p>
+    <script>
+        // TESING JQUERY VS JAVASCRIPT FOR DOM MANIPULATION
+        const getP = () => {
+            const p = $(".txt");
+            $("#demo").text("Text in last paragraph : " + p[p.length - 1].innerText);
+            console.log(typeof p, p, p[p.length - 1])
+        }
+        $(document).ready(getP())
+
+        // TESING BOM : NAVIGATOR AND HISTORY OBJECTS
+        console.log(`Using ${navigator.appCodeName} v${navigator.appVersion} (${navigator.language}) on ${navigator.platform}`);
+        const moveHistory = (direction) => direction === "back" ? window.history.back() : window.history.forward();
+        // TESTING COOKIES
+        const createCookie = (message) => document.cookie = `message="${message}"date="${new Date()}"`;
+        createCookie("Salut !")
+        console.log(document.cookie);
+    </script>
+</body>
+
+</html>

@@ -24,9 +24,10 @@
     console.log(window == globalThis && globalThis == this); // true
     console.log(typeof window, typeof globalThis, typeof this); // object x3
 
-    // TESTING URL() OBJECT
-    console.log(document.URL); // http://localhost:5500/
+    // TESTING URL() OBJECT AND WINDOW.LOCATION
+    console.log(document.URL, window.location.href); // http://localhost:5500/ (x2)
     console.log(new URL("http://localhost:5500/page?q=searchString&sort=false") instanceof URL); // true
+    console.log(`${window.location.protocol}//${window.location.hostname}:${this.location.port}${window.location.pathname}${window.location.search}`)
 
     // TESTING INLINE EVENT VS HTMLELEMENT.ADDEVENTLISTENER() : 2 DIFFERENT HTMLELEMENT PROPERTIES !
     const btn = document.querySelector("button");
